@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 
@@ -12,10 +12,11 @@ const MainVisual = () => {
     const [IDX, setIDX] = useState();
     useEffect(() => {
         setIDX(0)
-    }, [])
+    }, []);
+    const mainSlide = useRef(null);
     const setting = {
         arrows: false,
-        dots: true,
+        // dots: true,
         afterChange: index => setIDX(index),
         autoplay: true,
         autoplaySpeed: 5000,
@@ -23,7 +24,7 @@ const MainVisual = () => {
     }
     return (
         <section className="MainVisual">
-            <Slider {...setting}>
+            <Slider {...setting} ref={mainSlide}>
                 {
                     SLIDE.map((slide, idx) => {
                         return (
@@ -38,6 +39,22 @@ const MainVisual = () => {
                     })
                 }
             </Slider>
+            <div className="sliderNum">
+                0{IDX + 1}<span> /0{SLIDE.length}</span>
+            </div>
+            <ul className="slideTab">
+                {
+                    SLIDE.map((dots, idx) => {
+                        return (
+                            <li key={dots.id} className={idx === IDX ? 'on' : ''}>{dots.content}</li>
+                        )
+                    })
+                }
+            </ul>
+            <div className="slideArrows">
+                <button onClick={() => mainSlide.current.slickPrev()}><i className="xi-arrow-left"></i></button>
+                <button onClick={() => mainSlide.current.slickNext()}><i className="xi-arrow-right"></i></button>
+            </div>
         </section >
     )
 }

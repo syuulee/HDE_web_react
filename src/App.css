@@ -223,7 +223,9 @@
 }
 
 .MainVisual {
+  position: relative;
   padding: 155px 0 0 0;
+  color: var(--lc);
 }
 
 .MainVisual figure {
@@ -262,4 +264,41 @@
 .MainVisual .slick-slide {
   transition-duration: 5ms;
   /* slick 깜박이는 거 없애는 방법 */
+}
+
+.MainVisual .sliderNum {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  margin: 0 0 0 -600px;
+}
+
+.MainVisual .slideTab {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-100%, -50%);
+  margin: 0 0 0 600px;
+}
+
+.MainVisual .slideArrows button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: transparent;
+  border: none;
+  color: var(--lc);
+  font-size: 50px;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.5);
+  line-height: 1;
+}
+
+.MainVisual .slideArrows button:first-child {
+  margin: 0 0 0 -700px;
+}
+
+.MainVisual .slideArrows button:last-child {
+  margin: 0 0 0 700px;
 }
