@@ -221,3 +221,45 @@
   border-top: 1px solid var(--gc);
   transform: rotate(45deg);
 }
+
+.MainVisual {
+  padding: 155px 0 0 0;
+}
+
+.MainVisual figure {
+  position: relative;
+  height: calc(100vh - 155px);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 150% auto;
+}
+
+.MainVisual figure.on {
+  background-size: 100% auto;
+  transition: 1s;
+}
+
+.MainVisual .itm01 {
+  background-image: url(../public/assets/images/main_visual01.jpg);
+}
+
+.MainVisual .itm02 {
+  background-image: url(../public/assets/images/main_visual02.jpg);
+}
+
+.MainVisual .itm03 {
+  background-image: url(../public/assets/images/main_visual03.jpg);
+}
+
+.MainVisual figure .inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.MainVisual .slick-track,
+.MainVisual .slick-slide {
+  transition-duration: 5ms;
+  /* slick 깜박이는 거 없애는 방법 */
+}

@@ -15,7 +15,7 @@ const Header = () => {
     return (
         <header className="Header">
             <TopBanner />
-            <div class="hd_wrap">
+            <div className="hd_wrap">
                 <h1>
                     <a href="/" >
                         현대엘리베이트
@@ -64,4 +64,4 @@ const Header = () => {
         </header>
     )
 }
-export default Header;``
+export default Header;
