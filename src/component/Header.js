@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import TopBanner from './TopBanner';
+
 
 const NAVLINK = [
     { id: 1, menu: "기업정보", link: '/' },
@@ -12,8 +13,17 @@ const NAVLINK = [
 const Header = () => {
     const [TG, setTG] = useState(false);
     const [TS, setTS] = useState(false);
+    const HL = useRef();
+    useEffect(() => {
+        window.addEventListener('scroll', () => {
+            let sct = window.scrollY
+            sct > 0
+                ? HL.current.classList.add('on')
+                : HL.current.classList.remove('on')
+        })
+    }, [])
     return (
-        <header className="Header">
+        <header className="Header" ref={HL}>
             <TopBanner />
             <div className="hd_wrap">
                 <h1>
