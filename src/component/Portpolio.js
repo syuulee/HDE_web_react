@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 
@@ -12,14 +13,41 @@ const PTF = [
     { id: 8, title: "송도 G타워" },
     { id: 9, title: "부산 파크하얏트" },
 ]
+const NPTF = [
+    { id: 2, title: "서울드래곤시티(용산호텔)" },
+    { id: 3, title: "부산 파크하얏트" },
+    { id: 4, title: "송도 G타워" },
+    { id: 5, title: "롯데월드몰" },
+    { id: 6, title: "서울시청" },
+    { id: 7, title: "서울드래곤시티(용산호텔)" },
+    { id: 8, title: "송도 G타워" },
+    { id: 9, title: "부산 파크하얏트" },
+    { id: 1, title: "서울시청" },
+]
 
 const Portpolio = () => {
+    const LS = useRef();
+    const RS = useRef();
+
+    const [LSS, setLSS] = useState();
+    const [RSS, setRSS] = useState();
+
+    useEffect(() => {
+        setLSS(LS.current)
+        setRSS(RS.current)
+    }, [])
+
     return (
         <section className="Portpolio csc">
             <div className="container">
                 <div className="left">
                     <div className="slide">
-                        <Slider fade={true}>
+                        <Slider
+                            fade={true}
+                            ref={(LS)}
+                            asNavFor={RSS}
+                            arrows={false}
+                        >
                             {
                                 PTF.map(building => {
                                     return (
@@ -42,11 +70,14 @@ const Portpolio = () => {
                     <p>특별한 기술을 실현할수록 여러분의 삶의 무대도 특별해집니다.</p>
 
                     <div className="arrows">
-                        <i className="xi-angle-left"></i>
-                        <i className="xi-angle-right"></i>
+                        <i className="xi-angle-left" onClick={() => LS.current.slickPrev()}></i>
+                        <i className="xi-angle-right" onClick={() => LS.current.slickNext()}></i>
                     </div>
                     <div className="slide">
-                        <Slider fade={true}>
+                        <Slider slidesToShow={5} className="right_slide"
+                            ref={(RS)}
+                            asNavFor={LSS}
+                            arrows={false}>
                             {
                                 PTF.map(building => {
                                     return (

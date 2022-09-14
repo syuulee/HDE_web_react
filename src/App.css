@@ -432,9 +432,84 @@
   word-break: keep-all;
 }
 
-.Portpolio {}
+.Portpolio {
+  background: url(../public/assets/images/section1_bg.jpg)repeat-x;
+}
+
+.Portpolio h2 {
+  padding: 40px 0 0 0;
+  color: var(--lc);
+  text-align: left;
+}
+
+.Portpolio p {
+  color: var(--lc);
+  text-align: left
+}
+
+.Portpolio .arrows {
+  display: inline-block;
+  align-self: flex-start;
+  border: 1px solid var(--lc);
+  color: var(--lc);
+  font-size: 0;
+}
+
+.Portpolio .arrows i {
+  padding: 10px;
+  font-size: 30px;
+}
+
+.Portpolio .arrows i~i {
+  border-left: 1px solid var(--lc);
+}
 
 .Portpolio .container {
+  display: flex;
   width: calc(1200px + (100% - 1200px) / 2);
   margin: 0 0 0 auto;
+}
+
+.Portpolio .container>div {
+  min-width: 0;
+}
+
+.Portpolio .container .left {
+  width: 450px;
+}
+
+.Portpolio .container .right {
+  flex: 1;
+}
+
+.Portpolio .right {
+  display: flex;
+  flex-direction: column;
+}
+
+.Portpolio .right .slide {
+  overflow: hidden;
+  margin: auto 0 0 0;
+}
+
+.Portpolio .right_slide {
+  width: 1300px;
+}
+
+.Portpolio .right_slide figure {
+  padding: 0 20px 0 0;
+}
+
+.Portpolio .box {
+  margin: 0 0 30px 0;
+}
+
+.Portpolio .des {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.Portpolio .left .box {
+  width: 400px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
 }
