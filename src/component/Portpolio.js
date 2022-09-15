@@ -51,7 +51,7 @@ const Portpolio = () => {
                             {
                                 PTF.map(building => {
                                     return (
-                                        <figure>
+                                        <figure key={building.id}>
                                             <div className="box">
                                                 <img src={process.env.PUBLIC_URL + "/assets/images/main_m0" + building.id + ".jpg"} alt="" />
                                             </div>
@@ -81,7 +81,7 @@ const Portpolio = () => {
                             {
                                 PTF.map(building => {
                                     return (
-                                        <figure>
+                                        <figure key={building.id}>
                                             <div className="box">
                                                 <img src={process.env.PUBLIC_URL + "/assets/images/main_m0" + building.id + ".jpg"} alt="" />
                                             </div>

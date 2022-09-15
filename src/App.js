@@ -3,6 +3,8 @@ import Header from './component/Header';
 import MainVisual from './component/MainVisual';
 import MainContent from './component/MainContent';
 import Portpolio from './component/Portpolio';
+import Solution from './component/Solution';
+import Promotion from './component/Promotion';
 
 const App = () => {
 
@@ -13,6 +15,8 @@ const App = () => {
         <MainVisual />
         <MainContent />
         <Portpolio />
+        <Solution />
+        <Promotion />
       </main>
     </div>
   );
