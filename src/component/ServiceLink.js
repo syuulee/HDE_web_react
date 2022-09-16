@@ -34,13 +34,18 @@ const SERVICE = [
 
 const ServiceLink = () => {
     const [slink, setSlink] = useState(0);
+    const [swc, setSwc] = useState(false);
     return (
         <ul className="ServiceLink">
             {
                 SERVICE.map((link, idx) => {
                     return (
                         <li key={link.id}>
-                            <div className="title" onClick={() => setSlink(idx)}>{link.title}</div>
+                            <div className={"title" + ((slink === idx && swc) ? 'on' : '')} onClick={() => {
+                                setSlink(idx);
+                                setSwc(!swc);
+                            }
+                            }>{link.title}</div>
                             <ul className={"subLink " + (slink === idx ? 'on' : 'on')}>
                                 {
                                     link.sub.map((sub, idx) => {
@@ -54,7 +59,7 @@ const ServiceLink = () => {
                     )
                 })
             }
-        </ul>
+        </ul >
     )
 }
 
