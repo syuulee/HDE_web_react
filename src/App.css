@@ -635,7 +635,7 @@
   position: relative;
   width: 800px;
   height: 450px;
-  margin: 0 auto;
+  margin: 0 auto 40px auto;
 }
 
 .Promotion .movie .u {
@@ -644,4 +644,206 @@
   height: 100%;
   top: 0;
   left: 0;
+}
+
+.Promotion .des {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  text-align: center;
+}
+
+.Promotion .des>li {
+  cursor: pointer;
+  width: 300px;
+}
+
+.Promotion .des>li:first-child::after {
+  content: "";
+  position: absolute;
+  top: 15%;
+  left: calc(50% - 10px);
+  width: 4px;
+  height: 15px;
+  background: var(--lc);
+  transition: 0.3s;
+}
+
+.Promotion .des>li:last-child::after {
+  content: "";
+  position: absolute;
+  top: 15%;
+  left: calc(50% + 5px);
+  width: 4px;
+  height: 15px;
+  background: var(--lc);
+  transition: 0.3s;
+}
+
+.Promotion .des>li:first-child.on::after {
+  height: 30px;
+  background: var(--sc);
+  transition: 0.3s;
+}
+
+.Promotion .des>li:last-child.on::after {
+  height: 30px;
+  background: var(--sc);
+  transition: 0.3s;
+}
+
+.Promotion .des .tit {
+  color: var(--sc);
+  font-size: 20px;
+  font-weight: 300;
+  margin: 0 0 20px 0;
+}
+
+.Promotion .des p {
+  color: var(--lc);
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.Promotion .movie_title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 0 0 0 15px;
+  line-height: 35px;
+  min-width: 300px;
+  color: var(--lc);
+  background: var(--mc);
+}
+
+.News .inner {
+  display: flex;
+  gap: 30px;
+}
+
+.News .inner figure {
+  flex: 1;
+}
+
+.News .inner figure img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.News .box {
+  margin: 0 0 30px 0;
+}
+
+.News strong {
+  display: block;
+  margin: 0 0 15px 0;
+  font-size: 14px;
+  color: var(--mc);
+}
+
+.News figure .title {
+  font-size: 20px;
+  font-weight: 500;
+  word-break: keep-all;
+  line-height: 1.45;
+  min-height: 80px;
+}
+
+.News figure:hover .title {
+  text-decoration: underline;
+}
+
+.News span {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.Footer {
+  border-top: 1px solid var(--lc);
+}
+
+.Footer .ft_top {
+  line-height: 70px;
+  border-bottom: 1px solid var(--gc);
+}
+
+.Footer .inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Footer .ft_top .left {
+  display: flex;
+  gap: 50px;
+  /* 반응형 생각하면 inline-block 하는 거 추천 */
+}
+
+.Footer .ft_top .left li {
+  position: relative;
+}
+
+.Footer .ft_top .left li~li::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -22px;
+  width: 4px;
+  height: 4px;
+  background: var(--gc);
+  border-radius: 50%;
+}
+
+.Footer .ft_top span {
+  color: var(--mc);
+  font-weight: 20px;
+  margin: 0 0 0 5px;
+}
+
+.ServiceLink {
+  position: relative;
+  display: flex;
+  gap: 30px;
+}
+
+.ServiceLink .title {
+  position: relative;
+  padding: 0 40px 0 0;
+}
+
+.ServiceLink .title::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 10px;
+  height: 2px;
+  background: var(--mc);
+}
+
+.ServiceLink .title::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 4px);
+  right: 4px;
+  width: 2px;
+  height: 10px;
+  background: var(--mc);
+}
+
+.ServiceLink .subLink {
+  display: none;
+  gap: 30px;
+  position: absolute;
+  top: -72px;
+  right: 0;
+  width: 1200px;
+  background: var(--gc);
+  border: 1px solid var(--gc);
+  padding: 0 0 0 30px;
+}
+
+.ServiceLink .subLink.on {
+  display: flex;
 }

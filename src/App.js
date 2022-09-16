@@ -5,6 +5,9 @@ import MainContent from './component/MainContent';
 import Portpolio from './component/Portpolio';
 import Solution from './component/Solution';
 import Promotion from './component/Promotion';
+import News from './component/News';
+import Footer from './component/Footer';
+
 
 const App = () => {
 
@@ -17,7 +20,9 @@ const App = () => {
         <Portpolio />
         <Solution />
         <Promotion />
+        <News />
       </main>
+      <Footer />
     </div>
   );
 }
