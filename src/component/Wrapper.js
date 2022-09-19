@@ -1,11 +1,11 @@
 import React from 'react'
 
-
-export const Wrapper = () => {
+const Wrapper = ({ children }) => {
     return (
-        <div>Wrapper</div>
+        <div className='Wrapper'>
+            {children}
+        </div>
     )
 }
-
 
 export default Wrapper;

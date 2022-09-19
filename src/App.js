@@ -1,5 +1,5 @@
 import './App.css';
-import Header from './component/Header';
+import Header from './component/Header'
 import MainVisual from './component/MainVisual';
 import MainContent from './component/MainContent';
 import Portpolio from './component/Portpolio';
@@ -9,14 +9,11 @@ import News from './component/News';
 import Footer from './component/Footer';
 import Totop from './component/Totop';
 import Popup from './component/Popup';
-// import Wrapper from './component/Wrapper';
-
+import Wrapper from './component/Wrapper';
 
 const App = () => {
-
   return (
-    <div className="Wrap">
-      {/* <Wrapper> */}
+    <Wrapper>
       <Header />
       <main>
         <MainVisual />
@@ -29,8 +26,7 @@ const App = () => {
       <Footer />
       <Totop />
       <Popup />
-      {/* </Wrapper> */}
-    </div >
+    </Wrapper>
   );
 }
 
