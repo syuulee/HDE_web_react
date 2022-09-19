@@ -801,6 +801,11 @@
   margin: 0 0 0 5px;
 }
 
+.Footer .ft_bottom {
+  padding: 30px 0;
+  line-height: 1.45;
+}
+
 .ServiceLink {
   position: relative;
   display: flex;
@@ -822,7 +827,7 @@
   background: var(--mc);
 }
 
-.ServiceLink .title::after {
+.ServiceLink .title.on::after {
   content: "";
   position: absolute;
   top: calc(50% - 4px);
@@ -832,18 +837,18 @@
   background: var(--mc);
 }
 
-.ServiceLink .subLink {
+.ServiceLink .subLInk {
   display: none;
   gap: 30px;
   position: absolute;
   top: -72px;
   right: 0;
   width: 1200px;
-  background: var(--gc);
+  background: var(--lc);
   border: 1px solid var(--gc);
   padding: 0 0 0 30px;
 }
 
-.ServiceLink .subLink.on {
+.ServiceLink .subLInk.on {
   display: flex;
 }
