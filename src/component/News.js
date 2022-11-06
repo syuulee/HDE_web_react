@@ -5,7 +5,7 @@ const NEWS = [
         title: "현대엘리베이터, '스마트 앨리베이터 국내외 공모전 개최",
         date: '2022.08.22',
         link: '',
-        src: './assets/images/main_news01.jpg',
+        src: '/assets/images/main_news01.jpg',
     },
     {
         id: 2,
@@ -13,7 +13,7 @@ const NEWS = [
         title: '현대엘리베이터 “2030년까지 글로벌 Top 5로 도약한다”',
         date: '2022.07.14',
         link: '',
-        src: './assets/images/main_news02.jpg',
+        src: '/assets/images/main_news02.jpg',
     },
     {
         id: 3,
@@ -21,7 +21,7 @@ const NEWS = [
         title: '2022년 6월 사보',
         date: '2022년 6월호',
         link: '',
-        src: './assets/images/main_news03.jpg',
+        src: '/assets/images/main_news03.jpg',
     },
 ];
 
